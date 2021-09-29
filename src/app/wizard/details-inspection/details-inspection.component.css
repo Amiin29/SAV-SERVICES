@@ -1,0 +1,21 @@
+:host .card-content {
+  height: 450px;}
+:host .slide-content {
+ height: 447px;
+                    width: 79%;
+                    margin-left: 135px;
+
+}
+/*:host .slides .slide-content {
+  background-size: 1038px 452px !important;
+}
+:host .slides .slide:nth-child(1) .slide-content {
+  background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.opisto.fr%2Ffr%2Fauto%2Ffiche-produit%2F41594697%2Fvolant-fiat-punto-evo-3&psig=AOvVaw3MmEVA5r17ArLi4tMMkDh3&ust=1622761357346000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDQuqiH-vACFQAAAAAdAAAAABAD') 44% -1px no-repeat;
+}
+:host .slides .slide:nth-child(2) .slide-content {
+  background: url('http://random-ize.com/random-art-gallery/nozze-di-cana.jpg') 44% -1px no-repeat;
+}
+:host .slides .slide:nth-child(3) .slide-content {
+  background: url('http://random-ize.com/random-art-gallery/the-persistence-of-memory.jpg') 44% -1px no-repeat;
+}*/
+H2.widget-title{color:dimgrey}

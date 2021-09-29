@@ -1,0 +1,32 @@
+{
+   "projectName": "SAV-SERVICES-WEB",
+   "proxy": {
+      "/m3api-rest": {
+         "target": "https://srv-iso.italcar.intra:21008",
+         "secure": false,
+         "changeOrigin": true,
+         "logLevel": "debug"
+      },
+      "/mne": {
+         "target": "https://srv-iso.italcar.intra:21008",
+         "secure": false,
+         "changeOrigin": true,
+         "logLevel": "debug"
+      },
+      "/ca": {
+         "target": "https://srv-iso.italcar.intra:21008",
+         "secure": false,
+         "changeOrigin": true,
+         "logLevel": "debug"
+      },
+      "/ODIN_DEV_TENANT": {
+         "target": "ODIN_ION_PROXY_TARGET",
+         "secure": false,
+         "changeOrigin": true,
+         "pathRewrite": {
+            "^/ODIN_DEV_TENANT": "/ODIN_ION_PROXY_TENANT"
+         },
+         "logLevel": "debug"
+      }
+   }
+}

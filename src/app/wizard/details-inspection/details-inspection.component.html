@@ -1,0 +1,71 @@
+<div class="row">
+   <div class="full-width column">
+      <div class="summary-form" style="top: 50px;">
+         <div class="row" style="top: 50px;">
+            <div class="one-half column">
+               <div class="field">
+                  <legend>Numéro Client</legend>
+               </div>
+            </div>
+            <div class="one-half column">
+               <div class="field">
+                  <span class="data" style="margin-left: -466px;">{{NumClient}}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="card-content">
+
+         <div>
+            <div soho-circlepager *ngIf='imgs.length'>
+               <div class="slides">
+
+                  <div class="slide" *ngFor="let img of imgs">
+                     <div class="slide-content">
+                        <a class="hyperlink"></a><br />
+                        <img src="{{img['src']}}" style=" top: 50px;">
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+      <div soho-tabs>
+         <div soho-tab-list-container>
+            <ul soho-tab-list>
+               <li soho-tab>
+                  <a soho-tab-title tabId="tab-005">Notre Reception Conseil</a>
+               </li>
+               <li soho-tab>
+                  <a soho-tab-title tabId="tab-006">Contrôle Qualité Réparation</a>
+               </li>
+               <li soho-tab>
+               <li soho-tab>
+                  <a soho-tab-title tabId="tab-007">Observations</a>
+               </li>
+               <li soho-tab>
+
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div soho-tab-panel-container>
+         <div soho-tab-panel tabId="tab-005">
+            <app-reception [inspec]="inspec[0].reception"></app-reception>
+         </div>
+         <div soho-tab-panel-container>
+            <div soho-tab-panel tabId="tab-006">
+               <app-qualite [inspec]="inspec[0].qualite"></app-qualite>
+            </div>
+         </div>
+         <div soho-tab-panel-container>
+            <div soho-tab-panel tabId="tab-007">
+               <app-observation [inspec]="inspec[0].observation"></app-observation>
+            </div>
+         </div>
+      </div>

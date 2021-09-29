@@ -1,0 +1,27 @@
+<div soho-wizard (afteractivated)="onAfterActivated($event)" (beforeactivate)="onBeforeActivated($event)"
+   (activated)="onActivated($event)">
+   <div soho-wizard-header style="top: 49px;">
+      <a soho-wizard-tick tickId="app-vehicule" shortLabel="Target" current="true">Véhicule</a>
+      <a soho-wizard-tick tickId="backup-rule" shortLabel="Backup" [disabled]="!VehiculeIsSelected">Inspections</a>
+      <a soho-wizard-tick tickId="validation-rule" shortLabel="Rule" [disabled]="!InspectionIsSelected">Details
+         Inspection</a>
+
+
+   </div>
+   <div class="full-width full-height scrollable-flex">
+      <div soho-wizard-pages>
+         <div soho-wizard-page tickId="app-vehicule">
+            <vehicule [CUNO]="currentItemSelected" (newVehculeEvent)="ReciveSelectedVehicule($event)"></vehicule>
+         </div>
+         <div soho-wizard-page tickId="backup-rule">
+            <app-inspection *ngIf="VehiculeIsSelected" [currentVISelected]="currentVehculeSelected"
+               (newInspectionEvent)="ReciveIspectionSelected($event)"></app-inspection>
+         </div>
+         <div soho-wizard-page tickId="validation-rule">
+            <app-details-inspection *ngIf="InspectionIsSelected" [inspec]="inspec"></app-details-inspection>
+         </div>
+         <div soho-wizard-page tickId="result"></div>
+      </div>
+   </div>
+
+</div>

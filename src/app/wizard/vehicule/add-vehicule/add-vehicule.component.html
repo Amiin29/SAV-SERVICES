@@ -1,0 +1,52 @@
+<div class="full-width column">
+   <div class="field">
+      <label for="context-type" class="required">Modèle</label>
+      <select soho-dropdown id="context-type" name="type" aria-required="true" data-validate="required"
+         [(ngModel)]="ValueOfModelSelected">
+         <option [selected]="Model.MMITNO" *ngFor="let Model of Models" value="{{Model['MMITNO']}}">{{Model['MMITNO']}}
+            | {{Model["MMITDS"]}}</option>
+      </select>
+   </div>
+   <form [formGroup]="myForm">
+      <div class="form-group">
+         <div class="field">
+            <label for="context-name" class="required">Chassis</label>
+            <input id="context-name" aria-required="true" data-validate="required" [(ngModel)]="Vinnumber" ngModel
+               ng-model="Vinnumber" name="context-name" type="text" class="form-control" formControlName="chassis"
+               [ngClass]="{'is-invalid': myForm.get('chassis').hasError('minlength')}" (keyup)="handleinput()" />
+            <div class="invalid-feedback">
+               <strong *ngIf="myForm.get('chassis').hasError('minlength')">La longueur du chassis doit être égale à 17
+               </strong>
+               <strong *ngIf="myForm.get('chassis').hasError('pattern')">Chassis n'admet que A-Z et 0-9 </strong>
+            </div>
+         </div>
+      </div>
+
+      <div class="form-group">
+         <div class="field">
+            <label for="context-name" class="required">Matricule</label>
+            <input id="context-name" aria-required="true" data-validate="required" [(ngModel)]="Numserie" ngModel
+               ng-model="Numserie" name="context-name" type="text" class="form-control" formControlName="matricule"
+               [ngClass]="{'is-invalid': myForm.get('matricule').hasError('minlength')}" (keyup)="handleinput()" />
+            <div class="invalid-feedback">
+               <strong *ngIf="myForm.get('matricule').hasError('minlength')">La longueur du matricule doit être égale à
+                  8 ou 9 caractères </strong>
+               <br>
+               <strong *ngIf="myForm.get('matricule').hasError('pattern')">Matricule n'admet que TU et 0-9 </strong>
+            </div>
+         </div>
+      </div>
+   </form>
+   <div class="four columns">
+      <div class="field" style="margin-left: 37px;width: 152px;">
+         <label for="standard12" style="margin-left: -55px;    width: 281px;">Date de premier mise en
+            circulation</label>
+         <div style="margin-left: -55px"><input soho-datepicker name="standard12" placeholder="jj" [(ngModel)]="date" />
+         </div>
+      </div>
+   </div>
+
+
+
+
+</div>

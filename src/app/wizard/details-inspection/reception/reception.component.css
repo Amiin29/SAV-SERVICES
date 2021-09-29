@@ -1,0 +1,33 @@
+th.TOUR{    width: 450px;
+    background-color: lightgray;}
+th.PORT{width: 450px;
+    background-color: lightgray;}
+input{    background-color: transparent;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    content: '';
+    height: 14px;
+    margin-left: -25px;
+    margin-top: -7px;
+    position: absolute;
+    width: 14px;
+    margin-left: 10px;}
+    th.INTERIEUR{
+        background-color: lightgray;
+    }
+    th.CAPOT{  background-color: lightgray;}
+    th.Bon{ background-color: lightgray;}
+    th.Mauvais{ background-color: lightgray;}
+    table, th, td {
+        padding: 2px;
+        border: 2px solid rgb(9, 124, 170);
+        border-collapse: collapse;
+        
+        }
+        input{
+             -webkit-appearance: checkbox !important;
+        }
+  
+
+      
+    

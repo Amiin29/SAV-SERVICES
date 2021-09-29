@@ -1,0 +1,95 @@
+<soho-toolbar [maxVisibleButtons]="6" [resizeContainers]="true" [favorButtonset]="true" (selected)="onSelected($event)"
+   (deselected)="onDeselected($event.rows)">
+   <soho-toolbar-title>
+      <span soho-toolbar-section-title></span>
+   </soho-toolbar-title>
+
+   <!-- buttons -->
+
+</soho-toolbar>
+
+
+<div style="margin-left: 648px;top: 50px;">
+   <img src="{{imageSrc}}" style="width: 50px;" title="Ajout Véhicule" data-action="{'button':'add'}"
+      (click)="ModalAddVhehicule()" *ngIf="hasSelected==false" />
+
+</div>
+<div style="margin-left: 648px;top: 50px;">
+   <img src="https://img.icons8.com/ios-filled/50/000000/add-administrator.png" title="Ajout Client"
+      data-action="{'button':'add'}" (click)="Modal_ajouter_client()" style="width: 39px;"
+      *ngIf="ButtAddClient==true" />
+</div>
+
+<div soho-tabs>
+   <!--<button soho-button="icon" icon="edit" title="Edit"></button>-->
+   <div style="width: 638px;">
+      <div #vehiculeDatagrid soho-datagrid [gridOptions]="datagridOptions" (selected)="onSelected($event.rows)"
+         soho-busyindicator [activated]="isBusy" (deselected)="onDeselected($event.rows)" [blockUI]="true"
+         [displayDelay]="0">
+      </div>
+   </div>
+   <div soho-tab-list-container>
+      <ul soho-tab-list>
+         <li soho-tab>
+            <a soho-tab-title tabId="tab-001">Garantit Véhicule</a>
+         </li>
+         <li soho-tab>
+            <a soho-tab-title tabId="tab-002">Lecture Compteur</a>
+         </li>
+         <li soho-tab>
+            <a soho-tab-title tabId="tab-002">Compagnie de rappel</a>
+         </li>
+      </ul>
+   </div>
+</div>
+<!-----------------------------------------Garantie Véhicule--------------------------------------->
+<div soho-tab-panel-container>
+
+   <div soho-tab-panel tabId="tab-001">
+      <app-garantit-vehicule *ngIf="hasSelected" [LIITNO]="itemGarantitITNO" [LISERN]="itemGarantitSERN">
+      </app-garantit-vehicule>
+   </div>
+</div>
+<div soho-tab-panel-container>
+
+   <div soho-tab-panel tabId="tab-002">
+      <app-compteur-vehicule *ngIf="hasSelected" [LIITNO]="itemCompteurITNO" [LISERN]="itemCompteurSERN">
+      </app-compteur-vehicule>
+   </div>
+</div>
+<div class="item2">
+
+   <div class="field" *ngIf="hasSelected && NumClient!=''&& RFIA!='' "
+      style="    top: -600px;margin-left: 730px;width: 210px;">
+      Numéro Client
+      <label for="di-cumn"><input type="text" id="row-6-7" name="row-6-7" readonly [(ngModel)]="NumClient" />
+      </label>
+   </div>
+   <div class="field" *ngIf="hasSelected && NumClient!=''&& RFIA!='' "
+      style="    top: -568px;margin-left: 986px;width: 210px;">
+      Ville
+      <label for="di-cumn"><input type="text" id="row-6-7" name="row-6-7" [(ngModel)]="Ville" /></label>
+   </div>
+   <div class="field" *ngIf="hasSelected && NumClient!=''&& RFIA!='' "
+      style="margin-left: 985px;top: -688px;width: 210px;">
+      Téléphone
+      <label for="di-cumn"><input type="text" id="row-6-7" name="row-6-7" [(ngModel)]="Tel" /></label>
+   </div>
+   <div class="field" *ngIf="hasSelected && NumClient!=''&& RFIA!='' "
+      style="top: -703px;margin-left: 733px;width: 210px;">
+      Adresse
+      <label for="di-cumn"><input type="text" id="row-6-7" name="row-6-7" [(ngModel)]="Adresse" /></label>
+   </div>
+   <div class="field" *ngIf="hasSelected && NumClient!=''&& RFIA!=''"
+      style="margin-left: 732px;width: 210px;top: -824px;">
+      Nom etPrénom
+      <label for="di-cumn"><input type="text" id="row-6-7" name="row-6-7" [(ngModel)]="Nom" /></label>
+   </div>
+   <div class="field" style="margin-left: 732px;width: 207px;top:-788px;"
+      *ngIf="hasSelected && NumClient!=''&& RFIA!=''">
+      <img src="https://img.icons8.com/ios-glyphs/30/000000/edit-property.png" title="Modifier Client"
+         (click)="UpdateDataCustomer()" />
+
+   </div>
+
+</div>

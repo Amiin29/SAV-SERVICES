@@ -1,0 +1,225 @@
+<table *ngIf="inspec">
+    <tr>
+      <th class="TOUR"><strong>Tous Travaux</strong></th>
+      <th class="Aprevoir" style="padding: 7px;color: rgb(9, 124, 170);">Bon</th>
+      <th class="Aprevoir"  style="padding: 7px;color: rgb(9, 124, 170);">Mauvais</th>
+      
+      <th class="PORT"><strong>Entretien Periodique(Sur Le dossier)</strong></th>
+      <th class="Aprevoir"  style="padding: 7px;color: rgb(9, 124, 170);">Bon</th>
+      <th class="Aprevoir"  style="padding: 7px;color: rgb(9, 124, 170);">Mauvais</th>
+   </tr>
+    <tr>
+      <td>Présence des éléments de protection</td>
+      <td><input type="checkbox" id="reponse-1" name="Protection"  [checked]="inspec.a_presence_des_elements_de_protections==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="Protection"  [checked]="inspec.a_presence_des_elements_de_protections==1 ? true:false" onclick="return false;" /></td>
+      <td>Essai</td>
+      <td><input type="checkbox" id="reponse-1" name="Essai"  [checked]="inspec.a_essai==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="Essai"  [checked]="inspec.a_essai==1 ? true : false" onclick="return false;" /></td>
+     </tr>
+   
+    <tr>
+    <tr>
+    <th class="CAPOT"><strong> Autre Travaux (Sur le véhicule)</strong></th>
+    <td class="Aprevoir"></td>
+    <td class="Aprevoir"></td>
+    <th class="CAPOT"><strong>Présentation de contrôle : Statique</strong></th>
+    <td class="Aprevoir"></td>
+    <td class="Aprevoir"></td>
+
+
+    </tr>
+   
+    <tr>
+      <td>Les travaux ont été correctement réalisés et les <br>accessoires remontés et restés</td>
+      <td><input type="checkbox" id="reponse-1" name="accessoires"  [checked]="inspec.a_les_traveaux_ont_ete_correctement_realises==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="accessoires"  [checked]="inspec.a_les_traveaux_ont_ete_correctement_realises==1 ? true : false" onclick="return false;" /></td>
+      <td>Huile moteur</td>
+      <td><input type="checkbox" id="reponse-1" name="Hmoteur"  [checked]="inspec.b_huile_moteur==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Hmoteur"  [checked]="inspec.b_huile_moteur==1 ? true : false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <th class="CAPOT"><strong>Fonctionnement</strong></th>
+    <td class="Aprevoir"></td>
+    <td class="Aprevoir"></td>
+      <td>Liquide de frein</td>
+      <td><input type="checkbox" id="reponse-1" name="  Lfrein"  [checked]="inspec.b_liquide_de_frein==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name=" Lfrein"  [checked]="inspec.b_liquide_de_freinr==1 ? true : false" onclick="return false;" /></td>
+    </tr>
+    <tr>
+      <td>Feux de position</td>
+      <td><input type="checkbox" id="reponse-1" name="  feuxP"  [checked]="inspec.b_feux_de_position==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="feuxP"  [checked]="inspec.b_feux_de_position==1 ? true : false" onclick="return false;" /></td>
+      <td>Huile boite</td>
+      <td><input type="checkbox" id="reponse-1"  name="  Hboite"  [checked]="inspec.b_huile_boites==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1"  name="  Hboite"  [checked]="inspec.b_huile_boites==1 ? true : false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Feux de croissement-Feux de route</td>
+      <td><input type="checkbox" id="reponse-1" name="  Fcroissement"  [checked]="inspec.b_feux_de_croisement_feux_de_route==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="  Fcroissement"  [checked]="inspec.b_feux_de_croisement_feux_de_route==1 ? true : false" onclick="return false;" /></td>
+      <td>Liquide de refroidissement</td>
+      <td><input type="checkbox" id="reponse-1" name="refroidissement"  [checked]="inspec.b_liquide_de_refroidissement==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="refroidissement"  [checked]="inspec.b_liquide_de_refroidissement==1 ? true : false" onclick="return false;" /></td>
+    </tr>
+    <tr>
+      <td>Clignotants</td>
+      <td><input type="checkbox" id="reponse-1" name="clignotants"  [checked]="inspec.b_clignotants==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="clignotants"  [checked]="inspec.b_clignotants==1 ? true : false" onclick="return false;" /></td>
+      <td>Liquide de direction</td>
+      <td><input type="checkbox" id="reponse-1" name="direction"  [checked]="inspec.b_liquide_de_direction==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="direction"  [checked]="inspec.b_liquide_de_direction==1 ? true : false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Feux de stop</td>
+      <td><input type="checkbox" id="reponse-1" name="Fstop"  [checked]="inspec.b_feux_de_stop==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Fstop"  [checked]="inspec.b_feux_de_stop==1 ? true : false" onclick="return false;"  /></td>
+      <td>Etanchétie freins</td>
+      <td><input type="checkbox" id="reponse-1"  name="Efrein"  [checked]="inspec.b_etancheite_freins==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1"  name="Efrein"  [checked]="inspec.b_etancheite_freins==1 ? true : false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Feux de recule-Eclaireur de plaque</td>
+      <td><input type="checkbox" id="reponse-1" name="Feuxrecule"  [checked]="inspec.b_feux_de_recule_eclaireur_de_plaque==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="Feuxrecule"  [checked]="inspec.b_feux_de_recule_eclaireur_de_plaque==1 ? true : false" onclick="return false;" /></td>
+      <td>Liquide lave-glace(+efficacité EG)</td>
+      <td><input type="checkbox" id="reponse-1" name="Liquide"  [checked]="inspec.b_liquide_lave_glace==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Liquide"  [checked]="inspec.b_liquide_lave_glace==1 ? true : false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Anti-brouillard AV / AR</td>
+      <td><input type="checkbox" id="reponse-1" name="Anti-brouillard "  [checked]="inspec.b_anti_brouillard_av_ar==1 ? false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Anti-brouillard "  [checked]="inspec.b_anti_brouillard_av_ar==1 ? true : false" onclick="return false;"  /></td>
+      <td>Batterie(+serrage des cosses)</td>
+      <td><input type="checkbox" id="reponse-1" name="Batterie "  [checked]="inspec.b_batterie==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" id="reponse-1" name="Batterie"  [checked]="inspec.b_batterie==1 ? true : false" onclick="return false;" /></td>
+    </tr>
+    <tr>
+      <td>Voyants de sécurité(indicateur de bord)</td>
+      <td><input type="checkbox" id="reponse-1" name="Voyants "  [checked]="inspec.b_voyants_de_securite==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" id="reponse-1" name="Voyants "  [checked]="inspec.b_voyants_de_securite==1 ? true : false" onclick="return false;" /></td>
+      <th class="CAPOT"><strong>Controle</strong></th>
+      <td class="Aprevoir"></td>
+      <td class="Aprevoir"></td>
+    </tr>
+    <tr>
+      <td>Montre de bord (+mise à l'heure)</td>
+      <td><input type="checkbox" id="reponse-1" name="board "  [checked]="inspec.b_montre_de_bord==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" id="reponse-1" name="board"  [checked]="inspec.b_montre_de_bord==1 ? true : false" onclick="return false;" /></td>
+      <td>Tension des courroies des accessoires</td>
+      <td><input type="checkbox" id="reponse-1" name="courroies"  [checked]="inspec.b_tension_des_courroies_daccessoires ==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" id="reponse-1" name="courroies"  [checked]="inspec.b_tension_des_courroies_daccessoires ==1 ? true : false" onclick="return false;" /></td>
+    </tr>
+    <tr>
+      <th class="CAPOT"><strong>Controle</strong></th>
+      <td class="Aprevoir"></td>
+      <td class="Aprevoir"></td>
+      <td>Lecture des mémoires défauts</td>
+      <td><input type="checkbox" id="reponse-1"  name="memoirs"  [checked]="inspec.b_lecture_des_memoires_defauts ==1 ?  false:true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1"  name="memoires" [checked]="inspec.b_lecture_des_memoires_defauts ==1 ?  true : false"  onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Hauteur de pédale d'embrayage</td>
+      <td><input type="checkbox" id="reponse-1" name="memoirs"  [checked]="inspec.b_hauteur_de_pedale_dembrayage==1 ?  false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="memoirs"  [checked]="inspec.b_hauteur_de_pedale_dembrayage ==1 ?  true  :false" onclick="return false;"/></td>
+      <th class="CAPOT"><strong>Présentation de contrôle:Sur le pont</strong></th>
+      <td class="Aprevoir"></td>
+      <td class="Aprevoir"></td>
+   
+    </tr>
+    <tr>
+      <td>Course et efficacité frein à main</td>
+      <td><input type="checkbox" id="reponse-1" name="Course"  [checked]="inspec.b_course_et_efficacite_frein_a_main ==1 ? false  : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Course"  [checked]="inspec.b_course_et_efficacite_frein_a_main ==1 ?  true  :false" onclick="return false;"  /></td>
+      <th class="CAPOT"><strong>Controle</strong></th>
+      <td class="Aprevoir"></td>
+      <td class="Aprevoir"></td>
+   
+    </tr>
+    <tr>
+      <td>Etat + pression pneux (yc roue de secours)</td>
+      <td><input type="checkbox" id="reponse-1" name="Pression"  [checked]="inspec.b_etat_pression_pneux ==1 ?   false  : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="Pression"  [checked]="inspec.b_etat_pression_pneux ==1 ?  true  :false" onclick="return false;" /></td>
+      <td>Passage des vitesses AV/AR</td>
+      <td><input type="checkbox" id="reponse-1" name="vitesse"  [checked]="inspec.c_passage_des_vitesses_av_ar ==1 ?   false  : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="vitesse"  [checked]="inspec.c_passage_des_vitesses_av_ar==1 ?  true  :false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Propreité du véhicule intérieur-exterieur</td>
+      <td><input type="checkbox" id="reponse-1" name="Propreité"  [checked]="inspec.b_proprete_du_vehicule_interieur_exterieur==1 ?  false  : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Propreité"  [checked]="inspec.b_proprete_du_vehicule_interieur_exterieur ==1 ?  true  :false" onclick="return false;"   /></td>
+      <td>Température moteur + motoventilateur</td>
+      <td><input type="checkbox" id="reponse-1" name="Température"  [checked]="inspec.c_temperature_moteur==1 ?  false  : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Température"  [checked]="inspec.c_temperature_moteur==1 ?  true  :false" onclick="return false;"   /></td>
+    </tr>
+    <tr>
+      <th class="CAPOT"><strong>Présentation de contrôle:Sur le pont</strong></th>
+      <td class="Aprevoir"></td>
+      <td class="Aprevoir"></td>
+      <td>Tenue cap en ligne droite</td>
+      <td><input type="checkbox" id="reponse-1" name="TenueCdroite"  [checked]="inspec.c_tenue_cap_en_ligne_droite ==1 ?  false  : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="TenueCdroite"  [checked]="inspec.c_tenue_cap_en_ligne_droite==1 ?  true  :false" onclick="return false;"   /></td>
+    </tr>
+    <tr>
+      <td>Etat des soufflets de direction</td>
+      <td><input type="checkbox" id="reponse-1" name="soufflets"  [checked]="inspec.d_etat_des_soufflets_de_direction ==1 ?  false  : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="soufflets"  [checked]="inspec.d_etat_des_soufflets_de_direction==1 ?   true  :false" onclick="return false;"/></td>
+      <td>Tenue cap au freinage</td>
+      <td><input type="checkbox" id="reponse-1" name="freinage"  [checked]="inspec.c_tenue_cap_au_freinage ==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="freinage"  [checked]="inspec.c_tenue_cap_au_freinage ==1 ?  true  :false" onclick="return false;"  /></td>
+    </tr>
+    <tr>
+      <td>Etat des soufflets des routes</td>
+      <td><input type="checkbox" id="reponse-1" name="routes"  [checked]="inspec.d_etat_des_soufflets_des_rotules==1 ?  false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="routes"  [checked]="inspec.d_etat_des_soufflets_des_rotules ==1 ?  true  :false" onclick="return false;"  /></td>
+
+    </tr>
+    <tr>
+      <td>Etat des soufflets de transmissions</td>
+      <td><input type="checkbox" id="reponse-1" name="transmission"  [checked]="inspec.d_etat_des_soufflets_de_transmissions==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="transmission"  [checked]="inspec.d_etat_des_soufflets_de_transmissions ==1 ?  true  :false" onclick="return false;"  /></td>
+  
+    </tr>
+    <tr>
+      <td>Etanchétie du moteur</td>
+      <td><input type="checkbox" id="reponse-1" name="Emoteur"  [checked]="inspec.d_etancheite_du_moteur==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Emoteur"  [checked]="inspec.d_etancheite_du_moteur ==1 ?  true  :false" onclick="return false;"  /></td>
+      
+    </tr>
+    <tr>
+      <td>Etanchétie de la boite de vitesses</td>
+      <td><input type="checkbox" id="reponse-1" name="Bvitesse"  [checked]="inspec.d_etancheite_de_la_boite_de_vitesse==1 ?  false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="Bvitesse"  [checked]="inspec.d_etancheite_de_la_boite_de_vitesse ==1 ?  true  :false" onclick="return false;" /></td>
+    
+    </tr>
+    <tr>
+      <td>Etanchétie freins</td>
+      <td><input type="checkbox" id="reponse-1" name="Efrein"  [checked]="inspec.d_etancheite_freins==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="Efrein"  [checked]="inspec.d_etancheite_freins ==1 ?  true  :false" onclick="return false;"  /></td>
+      
+    </tr>
+    <tr>
+      <td>Etanchétie circuit de refroidissement</td>
+      <td><input type="checkbox" id="reponse-1" name="refroidissement"  [checked]="inspec.d_etancheite_circuit_de_refroidissement ==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="refroidissement"  [checked]="inspec.d_etancheite_circuit_de_refroidissement ==1 ?  true  :false" onclick="return false;"  /></td>
+      
+    </tr>
+    <tr>
+      <td>Etanchétie circuit hydraulique</td>
+      <td><input type="checkbox" id="reponse-1" name="hydraulique"  [checked]="inspec.d_etancheite_circuit_hydraulique==1 ?  false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" id="reponse-1" name="hydraulique"  [checked]="inspec.d_etancheite_circuit_hydraulique ==1 ?  true  : false" onclick="return false;" /></td>
+      
+    </tr>
+    <tr>
+      <td>Etanchétie direction assistée</td>
+      <td><input type="checkbox" id="reponse-1" name="directionA"  [checked]="inspec.d_etancheite_direction_assistee==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="directionA"  [checked]="inspec.d_etancheite_direction_assistee ==1 ?  true  : false" onclick="return false;" /></td>
+      
+    </tr>
+    <tr>
+      <td>Etanchétie amortisseurs</td>
+      <td><input type="checkbox" id="reponse-1" name="amortisseurs"  [checked]="inspec.b_hauteur_de_pedale_dembrayage==1 ?  false : true" onclick="return false;"  /></td>
+      <td><input type="checkbox" id="reponse-1" name="amortisseurs"  [checked]="inspec.b_hauteur_de_pedale_dembrayage ==1 ?  true  : false" onclick="return false;"  /></td>
+      
+    </tr>
+
+  </table>

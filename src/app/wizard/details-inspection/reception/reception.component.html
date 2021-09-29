@@ -1,0 +1,95 @@
+<table *ngIf="inspec">
+    <tr>
+      <th class="TOUR"><strong>TOUR DE VEHICULE</strong></th>
+      <th class="Bon" style="padding: 7px;color: rgb(9, 124, 170);">Bon</th>
+      <th class="Mauvais"  style="padding: 7px;color: rgb(9, 124, 170);">Mauvais</th>
+      <th class="PORT"><strong>SUR LE PORT</strong></th>
+      <th class="Bon"  style="padding: 7px;color: rgb(9, 124, 170);">Bon</th>
+      <th class="Mauvais"  style="padding: 7px;color: rgb(9, 124, 170);">Mauvais</th>
+
+    </tr>
+    <tr>
+      <td>Pare-chocs AV/AR-Calandre-Plaque immat.AV/AR-Caport-Hayon-Porte de coffre</td>
+      <td><input type="checkbox" name="Pare-chocs"  [checked]="inspec.tour_pare_chocs==1? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox"  name="Pare-chocs"  [checked]="inspec.tour_pare_chocs==1 ? true : false" onclick="return false;" /></td>
+      <td>Etat des gaines:Rotules de direction / de pivots / Transmissions / Crémaillières</td>
+      <td><input type="checkbox"  name="EtatG" [checked]="port_etat_des_gaines==1 ? false: true" onclick="return false;"/></td>
+      <td><input type="checkbox" name="EtatG" [checked]="port_etat_des_gaines==1 ? true : false" onclick="return false;" /></td>
+    </tr>
+    <tr>
+      <td>Etats optique AVD / AVG / ARD / ARG-Pare-brise -Essuie-glace</td>
+      <td><input type="checkbox" name="Etat-optique" [checked]="port_etat_des_gaines==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" name="Etat-optique" [checked]="port_etat_des_gaines==1 ? true : false" onclick="return false;" /></td>
+      <td>Etanchéité Freins : Etat des plaquettes + disque AV [sans démontage]</td>
+      <td><input type="checkbox"  name="Etanchite-frein" [checked]="port_etancheite_freins==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox"  name="Etanchite-frein" [checked]="port_etancheite_freins==1 ? true: false" onclick="return false;"/></td>
+    </tr>
+    <tr >
+      <td>Glace porte AVD / AVG / ARD / ARG - Custode - lunette AR - Essuie-glace</td>
+      <td><input type="checkbox" name="glace-porte" [checked]="tour_glace_porte==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox" name="glace-porte" [checked]="tour_glace_porte==1 ? true: false" onclick="return false;" /></td>
+      <td>Etanchéité : Moteur / Bdv / Circuit de refroidissement / Hydraulique</td>
+      <td><input type="checkbox"  name="Etanchité-M" [checked]="port_etancheite_moteur==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox"  name="Etanchité-M" [checked]="port_etancheite_moteur==1 ? true : false" onclick="return false;" /></td>
+    </tr>
+    <tr>
+      <td>Aile AVD / G-Porte AVD - AVG / ARG / ARD - Aile ARD / G </td>
+      <td><input type="checkbox"  name="Aile-AVD" [checked]="tour_aile_avd==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox"  name="Aile-AVD" [checked]="tour_aile_avd==1 ? true: false" onclick="return false;"/></td>
+      <td>Etat échappement : Tubulure / Tube AV / Poc / Silencieux / Tube AR</td>
+      <td><input type="checkbox"  name="Tublure" [checked]="port_etat_echappement==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox"  name="Tublure" [checked]="port_etat_echappement==1 ? true: false" onclick="return false;"/></td>
+    </tr>
+    <tr>
+      <td>Retro D /G-Baguette aile AVD / G porte AVD / AVG / ARD/ARG, aile ARD / G</td>
+      <td><input type="checkbox" id="reponse-1" name="Retro" [checked]="tour_retro==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" id="reponse-1" name="Retro" [checked]="tour_retro==1 ? true: false" onclick="return false;" /></td>
+      <th class="INTERIEUR"> <strong>  A L'INTERIEUR </strong>     </th>
+      <td class="Aprevoir"></td>
+      <td class="Aprevoir"></td>
+    </tr>
+    <tr>
+      <td>Enjoliveurs ADV / AVG / ARD / ARG</td>
+      <td><input type="checkbox"  name="Enjoliveurs" [checked]="tour_enjoliveurs==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox"  name="Enjoliveurs" [checked]="tour_enjoliveurs==1 ? true : false" onclick="return false;"/></td>
+      <td>Fonctionnement : Avertisseur optique / sonore / Montre / Voyants sécurité</td>
+      <td><input type="checkbox" name="Avertisseur-optique" [checked]="interieur_fonctionnement_avertisseur_optique==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" name="Avertisseur-optique" [checked]="interieur_fonctionnement_avertisseur_optique==1 ? true : false" onclick="return false;"/></td>
+    </tr>
+    <tr>
+      <td>Suspension AVD/AVG/ARD/ARG Etat des pneumatique AVD/AVG/ARD/ ARG Rds</td>
+      <td><input type="checkbox" name="Suspension" [checked]="tour_suspension==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" name="Suspension" [checked]="tour_suspension==1 ? true: false" onclick="return false;"/></td>
+      <td>Fonctionnement : Feux position D/ G- Feux croissement D / G-Feux route D / G</td>
+      <td><input type="checkbox"  name="Feux position" [checked]="interieur_fonctionnement_feux_position==1 ? false : true" onclick="return false;" /></td>
+      <td><input type="checkbox"  name="Feux position" [checked]="interieur_fonctionnement_feux_position==1 ? true: false" onclick="return false;"/></td>
+    </tr>
+    <tr>
+    <th class="CAPOT"><strong> SOUS LE CAPOT</strong></th>
+    <td class="Aprevoir"></td>
+    <td class="Aprevoir"></td>
+    <td>Feux Arrière D / G- Stop D / G- Troisième feux stop - feux plaque immat    </td>
+    <td><input type="checkbox"  name="Feux-Arrière" [checked]="interieur_feux_arriere==1 ? false : true" onclick="return false;"/></td>
+    <td><input type="checkbox"  name="Feux-Arrière" [checked]="interieur_feux_arriere==1 ? true: false" onclick="return false;"/></td>
+    </tr>
+    <tr>
+      <td>Etat: Faisceaux - Durifs - Batterie - Tension des courroies</td>
+      <td><input type="checkbox" name="reponse-1" [checked]="capot_etat==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" name="reponse-1" [checked]="capot_etat==1 ? true: false" onclick="return false;"/></td>
+      <td>Clignotants AVD/AVG/ARD/ARG/ Feux recul / Feux vrouillard AV /AR</td>
+      <td><input type="checkbox" name="reponse-1" [checked]="interieur_clignotants==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox" name="reponse-1" [checked]="interieur_clignotants==1 ? true: false" onclick="return false;"/></td>
+    </tr>
+    <tr>
+      <td>Niveau : Hulies - liquides de refroidissement /de frein/de LHM/de direction /de lave-glace</td>
+      <td><input type="checkbox"  name="reponse-1" [checked]="capot_niveau==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox"  name="reponse-1" [checked]="capot_niveau==1 ? true: false" onclick="return false;"/></td>
+      <td>Divers</td>
+      <td><input type="checkbox"  name="reponse-1" [checked]="interieur_divers==1 ? false : true" onclick="return false;"/></td>
+      <td><input type="checkbox"  name="reponse-1" [checked]="interieur_divers==1 ? true :  false" onclick="return false;"/></td>
+    </tr>
+  </table>
+
+
+    
+  
